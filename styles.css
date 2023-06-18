@@ -98,7 +98,7 @@ body {
         border-top: 2px inset #fdecc9;
     }
 
-#page {
+.page {
     position: absolute;
     background-image: url("images/page.png");
     background-size: cover;
@@ -109,6 +109,7 @@ body {
 
 button {
     position: absolute;
+    bottom: 10%;
     height: 50px;
     width: 200px;
     background-color: red;
