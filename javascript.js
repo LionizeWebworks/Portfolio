@@ -1,26 +1,40 @@
 const book = document.getElementById("book");
 const cover = document.getElementById("cover")
-const button = document.querySelector("button");
+const title = document.getElementById("title");
+
+/*--------*/
+
+/*----Buttons----*/
+const turnCoverButton = document.getElementById("turnPage1");
+const firstPageButton = document.getElementById("turnPage2");
 
 
 const zoom = function() {
     book.style.transform = "scale(3)";
     book.style.transition = "transform 3s";
     book.classList.add("hoverOff");
-    button.hidden = false;
+    turnCoverButton.style.display = "block";
 }
 
 book.onclick = zoom;
 
-// button.onmousedown = function() {
-//     button.style.color = "red";
-//     243, 62, 62
-// }
-
-const pageTurn = function() {
-    cover.style.transform =  "rotateX(10deg) rotateY(-180deg)";
+const openBook = function() {
+    book.style.transform = "scale(3) translateX(75px)";
+    cover.style.transform = "rotateX(10deg) rotateY(-180deg)";
     cover.style.transformOrigin = "center left";
     cover.style.transition = "transform 3s";
-}
+    turnCoverButton.style.display = "none";
+    firstPageButton.style.display = "block";
+    setTimeout(function() {
+      title.style.display = "none";
+    }, 900);
+  };
 
-button.onclick = pageTurn;
+turnCoverButton.onclick = openBook;
+
+const firstTurn = function() {
+
+    setTimeout(function() {
+        title.style.display = "none";
+      }, 900);
+}

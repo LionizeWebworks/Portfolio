@@ -9,7 +9,12 @@
 @font-face {
     font-family: "Narnia";
     src: url("fonts/NARNIABLL-2ODV.TTF") format("truetype");
-    }
+}
+
+@font-face {
+    font-family: "Curly";
+    src: url("fonts/ANANDABLACKPERSONALUSEREGULAR-RG9RX.TTF") format("truetype");
+}
 
 
 body {
@@ -27,7 +32,6 @@ body {
 }
 
 #table {
-    /* position: absolute; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,18 +39,20 @@ body {
     border-radius: 90%;
     height: 31.25rem;
     width: 31.25rem;
-    margin: 0 auto;
     border: 3px outset rgba(17, 8, 1, 0.5);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
 }
 
 #book {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: 12.5rem;
     width: 9.375rem;
 }
+
+
+/*----Front and Back Covers----*/
 
 #book:hover #cover {
     box-shadow: 0 0 30px rgba(255, 255, 255, .6);
@@ -58,7 +64,7 @@ body {
 
 #cover {
     z-index: 3;
-    transform-origin: center left;
+    /* transform-origin: center left; */
 }
 
 #back-cover {
@@ -85,42 +91,95 @@ body {
       box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
 }
 
-
-
 #title {
     position: relative;
     top: 12%;
     left: 4%;
+    border-bottom: 2px outset #fdecc9;
 }
 
     #logo {
         padding: 5px;
-        border-top: 2px inset #fdecc9;
     }
 
+
+    /*----Pages----*/
 .page {
     position: absolute;
     background-image: url("images/page.png");
     background-size: cover;
-    height: 11rem;
+    height: 11.5rem;
     width: 8.5rem;
     z-index: 2;
+    margin-left: 3px;
+    border-radius: 2px;
 }
+
+/*----Page One/Two----*/
+
+#p1-side1 {
+    display: block;
+}
+
+#p1-side2 {
+    display: none;
+}
+
+#p1-side1 h4 {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    font-size: 12px;
+    font-family: "Curly", 'Times New Roman', Times, serif;
+}
+
+#p1-side1 ul {
+    padding-left: 25px;
+    padding-top: 10px;
+    font-size: 8px;
+    font-family: 'Cinzel', serif;
+    list-style-type: none;
+    line-height: 1.7;
+}
+
+
+
+
+/*----Buttons----*/
 
 button {
     position: absolute;
     bottom: 10%;
     height: 50px;
     width: 200px;
-    background-color: red;
     margin: 30px;
     font-size: 18px;
     font-family: "Narnia", 'Times New Roman', Times, serif;
-    color: white;
-    border: 4px inset maroon;
     border-radius: 20px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
-
 }
 
-/* -----Zoom Settings----- */
+button:active {
+    background-color: rgb(255, 68, 68);
+    border: 4px inset rgb(255, 255, 255);
+}
+
+.even {
+    color: white;
+    background-color: red;
+    border: 4px inset maroon;
+}
+
+.odd {
+    background-color: white;
+    color: red;
+    border: 4px inset grey;
+}
+
+#turnPage1 {
+    display: none;
+}
+
+#turnPage2 {
+    display: none;
+}
