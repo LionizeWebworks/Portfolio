@@ -2,7 +2,10 @@ const book = document.getElementById("book");
 const cover = document.getElementById("cover")
 const title = document.getElementById("title");
 
-/*--------*/
+/*----Pages and Content----*/
+const pageOne = document.getElementById("one");
+const p1 = document.getElementById("p1");
+const p2 = document.getElementById("p2");
 
 /*----Buttons----*/
 const turnCoverButton = document.getElementById("turnPage1");
@@ -33,8 +36,17 @@ const openBook = function() {
 turnCoverButton.onclick = openBook;
 
 const firstTurn = function() {
-
     setTimeout(function() {
-        title.style.display = "none";
+        p1.style.display = "none";
+        p2.style.display = "flex";;
       }, 900);
+    pageOne.style.transform = "rotateX(10deg) rotateY(-180deg)";
+    pageOne.style.transformOrigin = "center left";
+    pageOne.style.transition = "transform 3s";
+    pageOne.style.zIndex = "4";
+    secondPageButton.style.display = "block";
+    firstPageButton.style.display = "none";
+
 }
+
+firstPageButton.onclick = firstTurn;
