@@ -6,10 +6,14 @@ const title = document.getElementById("title");
 const pageOne = document.getElementById("one");
 const p1 = document.getElementById("p1");
 const p2 = document.getElementById("p2");
+const pageTwo = document.getElementById("two");
+const p3 = document.getElementById("p3");
+const p4 = document.getElementById("p4");
 
 /*----Buttons----*/
-const turnCoverButton = document.getElementById("turnPage1");
-const firstPageButton = document.getElementById("turnPage2");
+const turnCoverButton = document.getElementById("turnCover");
+const pageButton1 = document.getElementById("turnPage1");
+const pageButton2 = document.getElementById("turnPage2");
 
 
 const zoom = function() {
@@ -27,7 +31,7 @@ const openBook = function() {
     cover.style.transformOrigin = "center left";
     cover.style.transition = "transform 3s";
     turnCoverButton.style.display = "none";
-    firstPageButton.style.display = "block";
+    pageButton1.style.display = "block";
     setTimeout(function() {
       title.style.display = "none";
     }, 900);
@@ -44,9 +48,25 @@ const firstTurn = function() {
     pageOne.style.transformOrigin = "center left";
     pageOne.style.transition = "transform 3s";
     pageOne.style.zIndex = "4";
-    secondPageButton.style.display = "block";
-    firstPageButton.style.display = "none";
+    pageButton2.style.display = "block";
+    pageButton1.style.display = "none";
 
 }
 
-firstPageButton.onclick = firstTurn;
+pageButton1.onclick = firstTurn;
+
+const secondTurn = function() {
+  setTimeout(function() {
+      p3.style.display = "none";
+      p4.style.display = "flex";
+    }, 900);
+  pageTwo.style.transform = "rotateX(10deg) rotateY(-180deg)";
+  pageTwo.style.transformOrigin = "center left";
+  pageTwo.style.transition = "transform 3s";
+  pageTwo.style.zIndex = "4";
+  pageButton3.style.display = "block";
+  pageButton2.style.display = "none";
+
+}
+
+pageButton2.onclick = secondTurn;
