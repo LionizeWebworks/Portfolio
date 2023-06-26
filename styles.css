@@ -1,11 +1,3 @@
-:root {
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
     font-family: "Narnia";
     src: url("fonts/NARNIABLL-2ODV.TTF") format("truetype");
@@ -15,6 +7,19 @@
     font-family: "Curly";
     src: url("fonts/ANANDABLACKPERSONALUSEREGULAR-RG9RX.TTF") format("truetype");
 }
+
+:root {
+    --titles: "Narnia", sans-serif;
+    --pageHeads: "Curly", serif;
+    --text: Georgia, 'Times New Roman', Times, serif;
+    --lists: "Cinzel", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 
 
 body {
@@ -53,6 +58,16 @@ body {
 
 
 /*----Front and Back Covers----*/
+#cover,
+#back-cover {
+    position: absolute;
+    background-image: url(images/grungy-front-book-cover-3.jpg);
+    background-size: cover;
+    border: 2px solid rgb(54, 22, 0);
+    border-radius: 2px 10px 10px 2px;
+    color: #fdecc9;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+}
 
 #book:hover #cover {
     box-shadow: 0 0 30px rgba(255, 255, 255, .6);
@@ -62,49 +77,93 @@ body {
     pointer-events: none;
 }
 
+/*------Front Cover------*/
+
 #cover {
     z-index: 0;
     height: 12.1rem;
     width: 9rem;
-}
-
-#back-cover {
-    z-index: -5;
-    height: 12rem;
-    width: 9rem;
-}
-
-#cover,
-#back-cover {
-    position: absolute;
-    background-image: url(images/grungy-front-book-cover-3.jpg);
-    background-size: cover;
-    /* height: 12rem;
-    width: 9rem; */
-    border: 2px solid rgb(54, 22, 0);
-    border-radius: 2px 10px 10px 2px;
-    color: #fdecc9;
-    font-family: 'Narnia', serif;
+    font-family: var(--titles);
     font-size: 1.1rem;
     text-align: center;
     text-shadow:
     -1px -1px 0 #000000da,
-     1px -1px 0 #000000da,
-     -1px 1px 0 #000000da,
-     1px 1px 0 #000000da;
-     box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+    1px -1px 0 #000000da,
+    -1px 1px 0 #000000da,
+    1px 1px 0 #000000da;
+}
+
+#title {
+    position: relative;
+    top: 12%;
+    left: 4%;
+    border-bottom: 2px outset #fdecc9;
+}
+
+#logo {
+    padding: 5px;
+}
+
+
+    /*------Back Cover------*/
+    #back-cover {
+        display: flex;
+        justify-content: center;
+        z-index: -5;
+        height: 12rem;
+        width: 9rem;
     }
 
-    #title {
-        position: relative;
-        top: 12%;
-        left: 4%;
-        border-bottom: 2px outset #fdecc9;
+    #sleeve {
+        position: absolute;
+        background-image: url("images/sleeve.png");
+        background-size: 100%;
+        transform: scaleY(-1);
+        border-radius: 5%;
+        border-bottom: 2px solid rgb(61, 30, 4);
+        height: 2rem;
+        width: 4rem;
+        bottom: 20%;
+        left: 33%;
+        z-index: -3;
     }
 
-    #logo {
-        padding: 5px;
+
+    #card {
+        display: block;
+        position: absolute;
+        background-color: white;
+        border: 1px solid rgb(221, 221, 221);
+        bottom: 21%;
+        left: 34.5%;
+        height: 35px;
+        width: 58px;
+        text-align: center;
+        color: black;
+        z-index: -4;
     }
+
+
+#card h1 {
+    font-family: var(--lists);
+    font-size: 5px;
+    color: red;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+#card h2 {
+    font-family: var(--text);
+    font-size: 4px;
+    font-weight: lighter;
+    color: black;
+    }
+
+
+
+
+
 
 
     /*----Pages----*/
@@ -134,26 +193,26 @@ z-index: -1;
 }
 
 
-/* Page 1, Side 1 */
+/* Page 1, Side 1: Table of Contents */
 #p1 h1 {
     display: flex;
     justify-content: center;
     padding-top: 1rem;
     font-size: 12px;
-    font-family: "Curly", 'Times New Roman', Times, serif;
+    font-family: var(--pageHeads);
 }
 
 #p1 ul {
     padding-left: 25px;
     padding-top: 10px;
     font-size: 8px;
-    font-family: 'Cinzel', serif;
+    font-family: var(--lists);
     list-style-type: none;
     line-height: 1.7;
 }
 
 
-/* Page 1, Side 2 */
+/* Page 1, Side 2: Bio */
 
 #p2 {
     display: none;
@@ -164,7 +223,7 @@ z-index: -1;
 #p2 h1 {
     padding-top: 1rem;
     font-size: 12px;
-    font-family: "Curly", 'Times New Roman', Times, serif;
+    font-family: var(--pageHeads);
 }
 
 #p2 img {
@@ -175,7 +234,7 @@ z-index: -1;
 #p2 h2 {
     position: relative;
     font-size: 8px;
-    font-family: 'Cinzel', serif;
+    font-family: var(--lists);
     text-align: center;
     color:rgb(54, 22, 0);
 }
@@ -195,32 +254,32 @@ z-index: -1;
 }
 
 
-/* Page 2, Side 1 */
+/* Page 2, Side 1: Bio */
 #p3 h3 {
     line-height: 1.3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--text);
     font-weight:lighter;
     font-size: 6px;
     text-align: center;
 }
 
-/* Page 2, Side 2 */
+/* Page 2, Side 2: Education */
 
 #p4 {
     display: none;
     flex-direction: column;
     align-items: center;
     padding: 16px;
-  }
+}
 
-  #p4 h1 {
+#p4 h1 {
     font-size: 12px;
-    font-family: "Curly", 'Times New Roman', Times, serif;
-  }
+    font-family: var(--pageHeads);
+}
 
-  #p4 ul {
+#p4 ul {
     font-size: 8px;
-    font-family: 'Cinzel', serif;
+    font-family: var(--lists);
     list-style-type: circle;
     line-height: 1.7;
 }
@@ -232,7 +291,7 @@ z-index: -1;
     z-index: -3;
 }
 
-/* Page 3, Side 2 */
+/* Page 3, Side 1: Work History */
 
 #p5 {
     display: flex;
@@ -243,7 +302,7 @@ z-index: -1;
 
   #p5 h1 {
     font-size: 12px;
-    font-family: "Curly", 'Times New Roman', Times, serif;
+    font-family: var(--pageHeads);
   }
 
   #p5 h3 {
@@ -255,7 +314,7 @@ z-index: -1;
     font-size: 8px;
   }
 
-/* Page 3, Side 2 */
+/* Page 3, Side 2: Projects */
 
 #p6 {
     display: none;
@@ -266,7 +325,7 @@ z-index: -1;
 
   #p6 h1 {
     font-size: 12px;
-    font-family: "Curly", 'Times New Roman', Times, serif;
+    font-family: var(--pageHeads);
   }
 
 
@@ -276,7 +335,7 @@ z-index: -1;
     z-index: -4;
 }
 
-/* Page 4, Side 2 */
+/* Page 4, Side 1: Social Media */
 
 #p7 {
     display: flex;
@@ -287,23 +346,38 @@ z-index: -1;
 
   #p7 h1 {
     font-size: 12px;
-    font-family: "Curly", 'Times New Roman', Times, serif;
+    font-family: var(--pageHeads);
   }
 
 
-/* Page 4, Side 2 */
+/* Page 4, Side 2: Planned Updates */
 
 #p8 {
     display: none;
     flex-direction: column;
     align-items: center;
     padding: 16px;
-  }
+}
 
-  #p8 h1 {
+#p8 h1 {
     font-size: 12px;
-    font-family: "Curly", 'Times New Roman', Times, serif;
-  }
+    font-family: var(--pageHeads);
+}
+
+#p8 h3 {
+  font-size: 10px;
+  text-align: center;
+}
+
+#p8 ul {
+    font-size: 8px;
+    font-family: var(--lists);
+    list-style-type: circle;
+    line-height: 1.2;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
 
 
 /*----Buttons----*/
@@ -315,7 +389,7 @@ button {
     width: 200px;
     margin: 30px;
     font-size: 18px;
-    font-family: "Narnia", 'Times New Roman', Times, serif;
+    font-family: var(--titles);
     border-radius: 20px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
 }

@@ -15,6 +15,8 @@ const p6 = document.getElementById("p6");
 const pageFour = document.getElementById("four");
 const p7 = document.getElementById("p7");
 const p8 = document.getElementById("p8");
+const sleeve = document.getElementById("sleeve");
+const card = document.getElementById("card");
 
 /*----Buttons----*/
 const turnCoverButton = document.getElementById("turnCover");
@@ -103,8 +105,7 @@ const turn4 = function() {
   pageFour.style.transform = "rotateX(10deg) rotateY(-180deg)";
   pageFour.style.transformOrigin = "-3px 100px";
   pageFour.style.transition = "transform 3s";
-  pageFour.style.zIndex = "3";
-  pageButton5.style.display = "block";
+  pageFour.style.zIndex = "4";
   pageButton4.style.display = "none";
 
 }
