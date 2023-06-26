@@ -73,14 +73,15 @@ body {
     box-shadow: 0 0 30px rgba(255, 255, 255, .6);
 }
 
-.hoverOff {
-    pointer-events: none;
-}
+/* .hoverOn{
+    pointer-events: auto!important;
+    box-shadow: 0 0 30px rgba(255, 255, 255, .6);
+} */
 
 /*------Front Cover------*/
 
 #cover {
-    z-index: 0;
+    z-index: 10;
     height: 12.1rem;
     width: 9rem;
     font-family: var(--titles);
@@ -109,9 +110,10 @@ body {
     #back-cover {
         display: flex;
         justify-content: center;
-        z-index: -5;
+        z-index: 3;
         height: 12rem;
         width: 9rem;
+
     }
 
     #sleeve {
@@ -125,7 +127,8 @@ body {
         width: 4rem;
         bottom: 20%;
         left: 33%;
-        z-index: -3;
+        z-index: 5;
+
     }
 
 
@@ -140,7 +143,7 @@ body {
         width: 58px;
         text-align: center;
         color: black;
-        z-index: -4;
+        z-index: 4;
     }
 
 
@@ -173,7 +176,7 @@ body {
         background-size: cover;
         height: 11.7rem;
         width: 8.5rem;
-        z-index: 2;
+        /* z-index: 11; */
         margin-left: 3px;
         border-radius: 2px;
 }
@@ -185,7 +188,7 @@ body {
 /*----Page One----*/
 
 #one {
-z-index: -1;
+z-index: 9;
 }
 
 #p1 {
@@ -245,7 +248,7 @@ z-index: -1;
 /*----Page Two----*/
 
 #two {
-    z-index: -2;
+    z-index: 8;
 }
 
 #p3 {
@@ -288,7 +291,7 @@ z-index: -1;
 /*----Page Three----*/
 
 #three {
-    z-index: -3;
+    z-index: 7;
 }
 
 /* Page 3, Side 1: Work History */
@@ -332,7 +335,7 @@ z-index: -1;
   /*----Page Four----*/
 
 #four {
-    z-index: -4;
+    z-index: 6;
 }
 
 /* Page 4, Side 1: Social Media */

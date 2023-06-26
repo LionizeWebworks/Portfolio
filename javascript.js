@@ -57,7 +57,7 @@ const turn1 = function() {
     pageOne.style.transform = "rotateX(10deg) rotateY(-180deg)";
     pageOne.style.transformOrigin = "-3px 100px";
     pageOne.style.transition = "transform 3s";
-    pageOne.style.zIndex = "1";
+    pageOne.style.zIndex = "11";
     pageButton2.style.display = "block";
     pageButton1.style.display = "none";
 
@@ -73,7 +73,7 @@ const turn2 = function() {
   pageTwo.style.transform = "rotateX(10deg) rotateY(-180deg)";
   pageTwo.style.transformOrigin = "-3px 100px";
   pageTwo.style.transition = "transform 3s";
-  pageTwo.style.zIndex = "2";
+  pageTwo.style.zIndex = "12";
   pageButton3.style.display = "block";
   pageButton2.style.display = "none";
 
@@ -89,7 +89,7 @@ const turn3 = function() {
   pageThree.style.transform = "rotateX(10deg) rotateY(-180deg)";
   pageThree.style.transformOrigin = "-3px 100px";
   pageThree.style.transition = "transform 3s";
-  pageThree.style.zIndex = "3";
+  pageThree.style.zIndex = "13";
   pageButton4.style.display = "block";
   pageButton3.style.display = "none";
 
@@ -105,9 +105,17 @@ const turn4 = function() {
   pageFour.style.transform = "rotateX(10deg) rotateY(-180deg)";
   pageFour.style.transformOrigin = "-3px 100px";
   pageFour.style.transition = "transform 3s";
-  pageFour.style.zIndex = "4";
+  pageFour.style.zIndex = "14";
   pageButton4.style.display = "none";
 
 }
 
 pageButton4.onclick = turn4;
+
+
+// const viewCard = function() {
+//   card.style.transform = "scale(3) translateY(200px)"
+//   card.style.transition = "transform 3s";
+// }
+
+// card.onclick = viewCard;
