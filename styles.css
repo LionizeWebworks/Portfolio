@@ -69,14 +69,14 @@ body {
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
 }
 
-#book:hover #cover {
+
+#book.hoverOn:hover #cover {
     box-shadow: 0 0 30px rgba(255, 255, 255, .6);
 }
 
-/* .hoverOn{
-    pointer-events: auto!important;
+#card.hoverOn:hover {
     box-shadow: 0 0 30px rgba(255, 255, 255, .6);
-} */
+}
 
 /*------Front Cover------*/
 
@@ -110,7 +110,7 @@ body {
     #back-cover {
         display: flex;
         justify-content: center;
-        z-index: 3;
+        z-index: 2;
         height: 12rem;
         width: 9rem;
 
@@ -136,7 +136,7 @@ body {
         display: block;
         position: absolute;
         background-color: white;
-        border: 1px solid rgb(221, 221, 221);
+        border: 1px outset rgb(221, 221, 221);
         bottom: 21%;
         left: 34.5%;
         height: 35px;
@@ -162,8 +162,6 @@ body {
     font-weight: lighter;
     color: black;
     }
-
-
 
 
 

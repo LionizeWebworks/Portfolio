@@ -1,5 +1,6 @@
 const book = document.getElementById("book");
 const cover = document.getElementById("cover")
+const backCover = document.getElementById("back-cover");
 const title = document.getElementById("title");
 
 /*----Pages and Content----*/
@@ -27,16 +28,17 @@ const pageButton4 = document.getElementById("turnPage4");
 
 
 const zoom = function() {
-    book.style.transform = "scale(3)";
-    book.style.transition = "transform 3s";
-    book.classList.add("hoverOff");
-    turnCoverButton.style.display = "block";
+  book.style.transform = "scale(3)";
+  book.style.transition = "transform 3s";
+  book.classList.remove("hoverOn");
+  turnCoverButton.style.display = "block";
 }
 
-book.onclick = zoom;
+book.addEventListener('click', zoom, { once: true });
 
 const openBook = function() {
     book.style.transform = "scale(3) translateX(75px)";
+
     cover.style.transform = "rotateX(10deg) rotateY(-180deg)";
     cover.style.transformOrigin = "center left";
     cover.style.transition = "transform 3s";
@@ -107,15 +109,18 @@ const turn4 = function() {
   pageFour.style.transition = "transform 3s";
   pageFour.style.zIndex = "14";
   pageButton4.style.display = "none";
-
+  card.classList.add("hoverOn");
 }
 
 pageButton4.onclick = turn4;
 
 
-// const viewCard = function() {
-//   card.style.transform = "scale(3) translateY(200px)"
-//   card.style.transition = "transform 3s";
-// }
+const viewCard = function() {
+  card.style.transform = "scale(3) translateY(-15px) translateX(-25px)"
+  card.style.transition = "transform 3s";
+  card.classList.remove("hoverOn");
+  backCover.style.zIndex = "14";
+  card.style.zIndex = "15"
+}
 
-// card.onclick = viewCard;
+card.onclick = viewCard;
