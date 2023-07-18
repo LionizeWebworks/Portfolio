@@ -27,12 +27,12 @@ const goForward3 = document.getElementById("turnPage3");
 const goForward4 = document.getElementById("turnPage4");
 
 /*----Back Buttons----*/
-const closeCoverButton = document.getElementById("closeCover");
 const goBack1 = document.getElementById("goBack1");
 const goBack2 = document.getElementById("goBack2");
 const goBack3 = document.getElementById("goBack3");
 const goBack4 = document.getElementById("goBack4");
 const goBack5 = document.getElementById("goBack5");
+const goBack6 = document.getElementById("goBack6");
 
 
 
@@ -59,6 +59,9 @@ book.addEventListener('click', zoom, { once: true });
           //moves book for proper turning
           cover.style.transition = "transform 3s";
 
+          turnCoverButton.disabled = true;
+          goForward1.disabled = false;
+          goBack1.disabled = false;
 
           setTimeout(function() {
             title.style.display = "none";
@@ -67,38 +70,37 @@ book.addEventListener('click', zoom, { once: true });
           setTimeout(function() {
             turnCoverButton.style.display = "none";
             goForward1.style.display = "inline";
-            closeCoverButton.style.display = "inline";
-            goForward1.disabled = false;
-            closeCoverButton.disabled = false;
-          }, 2500)
+            goBack1.style.display = "inline";
+          }, 2800)
         };
 
 turnCoverButton.onclick = openBook;
 
 
+//----PAGE 1----//
   //----Close Book----//
       const closeCover = function() {
         book.style.transform = "scale(3) translateX(0px)";
         book.style.stransition = "transform 3s";
-
         cover.style.transform = "rotateX(-10deg)";
         cover.style.transition = "transform 3s";
-        goForward1.disabled = true;
-        closeCoverButton.disabled = true;
 
         setTimeout(function() {
           title.style.display = "inline";
         }, 900);
 
+        goForward1.disabled = true;
+        goBack1.disabled = true;
+        turnCoverButton.disabled = false;
+
         setTimeout(function() {
           goForward1.style.display = "none";
-          closeCoverButton.style.display = "none";
+          goBack1.style.display = "none";
           turnCoverButton.style.display = "inline";
-        }, 2650);
+        }, 2800);
       }
 
-closeCoverButton.onclick = closeCover;
-
+goBack1.onclick = closeCover;
 
   //----TOC forward---//
       const turn1 = function() {
@@ -112,21 +114,23 @@ closeCoverButton.onclick = closeCover;
             pageOne.style.zIndex = "11";
 
             goForward1.disabled = true;
-            closeCoverButton.disabled = true;
+            goBack1.disabled = true;
 
             setTimeout(function() {
               goForward2.style.display = "inline";
-              goBack1.style.display = "inline";
+              goBack2.style.display = "inline";
               goForward2.disabled = false;
-              goBack1.disabled = false;
+              goBack2.disabled = false;
               goForward1.style.display = "none";
-              closeCoverButton.style.display = "none";
+              goBack1.style.display = "none";
           }, 2500);
         }
 
 goForward1.onclick = turn1;
 
-  //----Bio Back----//
+
+  //----PAGES 2 AND 3----//
+  //---- Back----//
 
 const back1 = function() {
   setTimeout(function() {
@@ -137,22 +141,22 @@ const back1 = function() {
     pageOne.style.transition = "transform 3s";
 
     goForward2.disabled = true;
-    goBack1.disabled = true;
+    goBack2.disabled = true;
 
   setTimeout(function() {
     goForward1.style.display = "inline";
-    closeCoverButton.style.display = "inline";
+    goBack1.style.display = "inline";
     goForward1.disabled = false;
-    closeCoverButton.disabled = false;
+    goBack1.disabled = false;
     goForward2.style.display = "none";
-    goBack1.style.display = "none";
-  }, 3000);
+    goBack2.style.display = "none";
+  }, 2800);
 }
 
-goBack1.onclick = back1;
+goBack2.onclick = back1;
 
 
-  //---- Bio forward ----//
+  //---- forward ----//
       const turn2 = function() {
         setTimeout(function() {
             p3.style.display = "none";
@@ -164,22 +168,22 @@ goBack1.onclick = back1;
         pageTwo.style.zIndex = "12";
 
         goForward2.disabled = true;
-        goBack1.disabled = true;
+        goBack2.disabled = true;
 
         setTimeout(function() {
-          goForward2.style.display = "inline";
-          goBack1.style.display = "inline";
-          goForward2.disabled = false;
-          goBack1.disabled = false;
-          goForward1.style.display = "none";
-          closeCoverButton.style.display = "none";
-      }, 2500);
+          goForward3.style.display = "inline";
+          goBack3.style.display = "inline";
+          goForward3.disabled = false;
+          goBack3.disabled = false;
+          goForward2.style.display = "none";
+          goBack2.style.display = "none";
+      }, 2800);
       }
 
 goForward2.onclick = turn2;
 
-
-  //---- Back 2----//
+  //----PAGES 4 AND 5----//
+  //---- Back----//
 
 const back2 = function() {
   setTimeout(function() {
@@ -189,18 +193,23 @@ const back2 = function() {
     pageTwo.style.transform = "rotateX(-10deg)";
     pageTwo.style.transition = "transform 3s";
 
-  setTimeout(function() {
-    goForward3.style.display = "none";
-    goBack2.style.display = "none";
-    goForward2.style.display = "inline";
-    goBack1.style.display = "inline";
-  }, 3000);
+    goForward3.disabled = true;
+    goBack3.disabled = true;
+
+    setTimeout(function() {
+      goForward2.style.display = "inline";
+      goBack2.style.display = "inline";
+      goForward2.disabled = false;
+      goBack2.disabled = false;
+      goForward3.style.display = "none";
+      goBack3.style.display = "none";
+  }, 2800);
 }
 
-goBack2.onclick = back2;
+goBack3.onclick = back2;
 
 
-    //----Turn 3----//
+    //----Forward----//
       const turn3 = function() {
         setTimeout(function() {
             p5.style.display = "none";
@@ -212,41 +221,50 @@ goBack2.onclick = back2;
         pageThree.style.transition = "transform 3s";
         pageThree.style.zIndex = "13";
 
+        goForward3.disabled = true;
+        goBack3.disabled = true;
+
         setTimeout(function() {
           goForward4.style.display = "inline";
-          goBack3.style.display = "inline";
+          goBack4.style.display = "inline";
+          goForward4.disabled = false;
+          goBack4.disabled = false;
           goForward3.style.display = "none";
-          goBack2.style.display = "none";
-        }, 2500);
+          goBack3.style.display = "none";
+        }, 2800);
 
       }
 
 goForward3.onclick = turn3;
 
-
-  //---- Back 3----//
+  //----PAGES 6 AND 7 ----//
+  //---- Back----//
 
   const back3 = function() {
     setTimeout(function() {
       p5.style.display = "flex";
       p6.style.display = "none";
     }, 900);
-
       pageThree.style.transform = "rotateX(-10deg)";
       pageThree.style.transition = "transform 3s";
 
-    setTimeout(function() {
-          goForward4.style.display = "none";
-          goBack3.style.display = "none";
-          goForward3.style.display = "inline";
-          goBack2.style.display = "inline";
-    }, 3000);
+      goForward4.disabled = true;
+      goBack4.disabled = true;
+
+      setTimeout(function() {
+        goForward3.style.display = "inline";
+        goBack3.style.display = "inline";
+        goForward3.disabled = false;
+        goBack3.disabled = false;
+        goForward4.style.display = "none";
+        goBack4.style.display = "none";
+      }, 2800);
   }
 
-  goBack3.onclick = back3;
+  goBack4.onclick = back3;
 
 
-    //----Pages 6/7----//
+    //----Forward----//
       const turn4 = function() {
         setTimeout(function() {
             p7.style.display = "none";
@@ -256,12 +274,45 @@ goForward3.onclick = turn3;
         pageFour.style.transformOrigin = "-3px 100px";
         pageFour.style.transition = "transform 3s";
         pageFour.style.zIndex = "14";
-        goForward4.style.display = "none";
+
+        goForward4.disabled = true;
+        goBack4.disabled = true;
+
+        setTimeout(function() {
+          goBack5.style.display = "inline";
+          goBack5.disabled = false;
+          goForward4.style.display = "none";
+          goBack4.style.display = "none";
+        }, 2800);
         card.classList.add("hoverOn");
       }
 
 goForward4.onclick = turn4;
 
+
+  //---- Back Cover----//
+
+  const back4 = function() {
+    setTimeout(function() {
+      p7.style.display = "flex";
+      p8.style.display = "none";
+    }, 900);
+      pageFour.style.transform = "rotateX(-10deg)";
+      pageFour.style.transition = "transform 3s";
+
+      goBack5.disabled = true;
+
+      setTimeout(function() {
+        goForward4.style.display = "inline";
+        goBack4.style.display = "inline";
+        goForward4.disabled = false;
+        goBack4.disabled = false;
+        goBack5.style.display = "none";
+      }, 2800);
+      card.classList.remove("hoverOn")
+  }
+
+  goBack5.onclick = back4;
 
     //----Contact Card----//
 

@@ -403,6 +403,7 @@ button {
     font-family: var(--titles);
     border-radius: 20px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+    user-select: none;
 }
 
 
@@ -485,7 +486,7 @@ button {
     display: none;
 }
 
-#closeCover {
+#goBack1 {
     display: none;
 }
 
@@ -493,7 +494,7 @@ button {
     display: none;
 }
 
-#goBack1 {
+#goBack2 {
     display: none;
 }
 
@@ -501,7 +502,7 @@ button {
     display: none;
 }
 
-#goBack2 {
+#goBack3 {
     display: none;
 }
 
@@ -509,7 +510,7 @@ button {
     display: none;
 }
 
-#goBack3 {
+#goBack4 {
     display: none;
 }
 
@@ -517,7 +518,7 @@ button {
     display: none;
 }
 
-#goBack4 {
+#goBack5 {
     display: none;
 }
 
@@ -525,6 +526,6 @@ button {
     display: none;
 }
 
-#goBack5 {
+#goBack6 {
     display: none;
 }
