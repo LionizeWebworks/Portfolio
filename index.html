@@ -11,7 +11,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 <title>Lionize Portfolio v1</title>
 </head>
@@ -22,7 +24,9 @@
                 <div id="cover">
                     <span id="title">Lionize Portfolio<p><img id="logo" src="images/Lion-Left-fotor-bg-remover-202305251125.png" style="width:90px;height:100px;"/></span>
                     </div>
-                    <!-- Page One -->
+
+
+                    <!-- Page One: Contents and Bio -->
                     <div class="page" id = "one">
                         <div id="p1">
                             <h1><u>Table of Contents</u></h1>
@@ -48,17 +52,13 @@
 
 
 
-                    <!-- Page Two -->
+                    <!-- Page Two: About Me and Education -->
                     <div class="page" id="two">
                         <div id="p3">
-                            <h3>Hi there! My name is Jennifer. I'm a junior dev who specializes in front end,
-                                but it is a personal goal of mine to keep studying the software engineering field until I've learned as much as I possibly can.
-                                Currently I'm working toward full stack development expertise and
-                                I also pride myself in coming up with more unique, imaginative and eye-catching ways
-                                to develop the projects I work on. <br>
-                                My main languages are Javascript and HTML/CSS, but I'm currently learning Python and React as well.
-                                Aside from loving the pursuit of knowledge, in my spare time  I paint wall murals, play video games
-                                and enjoy all things kawaii.
+                            <h3>Hi there, I'm Jennifer! I'm a Javascript Jr. Developer who specializes in HTML, CSS and Design Systems and I'm the founder of Lionize Webworks.
+                                I love creating innovative and eye-catching web designs that my customers (and their competition!) haven't seen before.
+                                <br>The best thing about me is that no matter what you put in front of me, if I don't know it, I will want to learn it, and my goal is to be proficient in as many systems and languages as possible.<br>
+                                My passion project is an Otome Visual novel game I'm developing that combines my love of writing, art, coding and video games all into one.
                             </h3>
                         </div>
                         <div class="flipside" id="p4">
@@ -72,12 +72,11 @@
                         </div>
                     </div>
 
-                       <!-- Page Three -->
-                       <div class="page" id="three">
+        <!-- Page Three: Work History and Projects -->
+                    <div class="page" id="three">
                         <div id="p5">
                             <h1><u>Work History</u></h1><br>
-                            <h3>AML Specialist - TD Bank: 5 years<br>
-                            Restaurant Manager - Shinbashi: 5 years</h3><br>
+
                             <h4><U>Link to resume</u></h4>
 
                         </div>
@@ -88,28 +87,29 @@
                         </div>
                     </div>
 
-                    <!-- Page Four -->
+        <!-- Page Four: Social Media and Updates -->
                     <div class="page" id="four">
                         <div id="p7">
                             <h1><u>Social Media</u></h1><br>
                             <a href="http://github.com/LionizeWebworks">Github</a><br>
-                            <a href="http://www.linkedin.com/in/lionizewebworks/">LinkedIn</a><br>: Work In Progress!
+                            <a href="http://www.linkedin.com/in/lionizewebworks/">LinkedIn</a><br>
                         </div>
 
                         <div class="flipside" id="p8">
                             <h1><u>Planned Updates</u></h1>
-                            <h3>Current Version: .8</h3>
                             <ul>
                                 <li>More aesthetic contact card</li>
                                 <li>Prev. page button</li>
                                 <li>Open with lock element</li>
-                                <li>Links in ToC</li>
+                                <li>Table of Contents Links</li>
                                 <li>Tidy CSS page</li>
+                            </ul>
+                                <h3>Current Version: 1</h3>
                         </div>
                     </div>
 
 
-
+        <!-- Back Cover -->
                     <div id="back-cover">
                         <div id="sleeve"> </div>
                         <div id="card"><h1>Lionize Webworks</h1>
@@ -118,12 +118,23 @@
                             </div>
                         </div>
                     </div>
-                <button class="even" id="turnCover">Turn the Page</button>
-                <button class="odd" id="turnPage1">Turn the Page</button>
-                <button class="even" id="turnPage2">Turn the Page</button>
-                <button class="odd" id="turnPage3">Turn the Page</button>
-                <button class="even" id="turnPage4">Turn the Page</button>
-                <button class="odd" id="turnPage5">Turn the Page</button>
+
+
+        <!-- Buttons -->
+                <div class="buttonBox">
+                    <button class="forward" id="turnCover">Open</button>
+                    <button class="back" id="closeCover">Go Back</button>
+                    <button class="forward" id="turnPage1">Next Page</button>
+                    <button class="back" id="goBack1">Go Back</button>
+                    <button class="forward" id="turnPage2">Next Page</button>
+                    <button class="back" id="goBack2">Go Back</button>
+                    <button class="forward" id="turnPage3">Next Page</button>
+                    <button class="back" id="goBack3">Go Back</button>
+                    <button class="forward" id="turnPage4">Next Page</button>
+                    <button class="back" id="goBack4">Go Back</button>
+                    <button class="forward" id="turnPage5">Next Page</button>
+                    <button class="back" id="goBack5">Go Back</button>
+                </div>
 
     </div>
 </div>
