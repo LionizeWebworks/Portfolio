@@ -299,6 +299,19 @@ z-index: 9;
     z-index: 7;
 }
 
+a {
+    position: absolute;
+    bottom: 10%;
+    font-size: 10px;
+    color: crimson;;
+}
+
+a:hover {
+    font-size: 10px;
+    color: maroon;
+    text-decoration: none;
+}
+
 /* Page 3, Side 1: Work History */
 
 #p5 {
