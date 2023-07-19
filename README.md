@@ -16,8 +16,20 @@ The book opens, the pages turn forward (with backwards turning and a functional 
 Most Recent Update: 2.0
 **New Features**
 *Turned off text selection
+*Added page numbers
 *Added completed resume
 *Added Back Buttons
-*Links to Social Media
-*Added more accessiblity features.
-*Deleted work history/education for reworking
+*Added links to Social Media
+
+
+**Planned Updates/Fixes**
+*TOC Links
+*More Accessibility Features
+*Make single page turns faster
+*Improve contact card animation
+*Add open with lock element? -maybe
+*Add Back to TOC button??? (Way Later!!)
+*Do something better/prettier with Social Media links
+                *Add icon overlapping with link and name?*
+*Plan for projects pages.
+                *Just add extra pages and more to TOC?*

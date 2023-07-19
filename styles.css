@@ -233,6 +233,11 @@ z-index: 9;
     line-height: 1.7;
 }
 
+#p1 li:hover {
+    text-decoration: underline;
+    color: rgb(116, 56, 1);
+}
+
 
 /* Page 1, Side 2: Bio */
 

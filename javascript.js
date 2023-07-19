@@ -3,6 +3,18 @@ const cover = document.getElementById("cover")
 const backCover = document.getElementById("back-cover");
 const title = document.getElementById("title");
 
+/*----Table of Contents Links----*/
+const toc = document.getElementById("toc");
+const about = document.getElementById("about");
+const bio = document.getElementById("bio");
+const education = document.getElementById("education");
+const work = document.getElementById("work");
+const projects = document.getElementById("projects");
+const social = document.getElementById("social");
+const version = document.getElementById("version");
+const contact = document.getElementById("contact");
+
+
 /*----Pages and Content----*/
 const pageOne = document.getElementById("one");
 const p1 = document.getElementById("p1");
@@ -77,6 +89,175 @@ book.addEventListener('click', zoom, { once: true });
 turnCoverButton.onclick = openBook;
 
 
+      /*----TABLE OF CONTENTS LINKS!!----*/
+
+              //----Education/Work----//
+      const educationWork = function() {
+        goForward1.disabled = true;
+        goBack1.disabled = true;
+
+        //First Page Turn
+      setTimeout(function() {
+          p1.style.display = "none";
+          p2.style.display = "flex";
+          pageOne.style.zIndex = "11";
+        }, 950);
+
+        pageOne.style.transform = "rotateX(10deg) rotateY(-180deg)";
+        pageOne.style.transformOrigin = "-3px 100px";
+        pageOne.style.transition = "transform 1500ms ease-in";
+
+        //Second Page Turn
+
+        setTimeout(function() {
+          setTimeout(function() {
+            p3.style.display = "none";
+            p4.style.display = "block";
+            pageTwo.style.zIndex = "12";
+          }, 950);
+          pageTwo.style.transform = "rotateX(10deg) rotateY(-180deg)";
+          pageTwo.style.transformOrigin = "-3px 100px";
+          pageTwo.style.transition = "transform 1500ms ease-in";
+        }, 600);
+
+
+        setTimeout(function() {
+          goForward1.style.display = "none";
+          goBack1.style.display = "none";
+          goForward3.style.display = "inline";
+          goBack3.style.display = "inline";
+          goForward3.disabled = false;
+          goBack3.disabled = false;
+        }, 1900);
+      }
+
+      education.onclick = educationWork;
+      work.onclick = educationWork;
+
+      //----------------//
+
+              //----6. Projects 7. Social----//
+      const projectsSocial = function() {
+        goForward1.disabled = true;
+        goBack1.disabled = true;
+
+        //First Page Turn
+      setTimeout(function() {
+          p1.style.display = "none";
+          p2.style.display = "flex";
+          pageOne.style.zIndex = "11";
+        }, 950);
+
+        pageOne.style.transform = "rotateX(10deg) rotateY(-180deg)";
+        pageOne.style.transformOrigin = "-3px 100px";
+        pageOne.style.transition = "transform 1500ms ease-in";
+
+        //Second Page Turn
+
+        setTimeout(function() {
+          setTimeout(function() {
+            p3.style.display = "none";
+            p4.style.display = "block";
+            pageTwo.style.zIndex = "12";
+          }, 950);
+          pageTwo.style.transform = "rotateX(10deg) rotateY(-180deg)";
+          pageTwo.style.transformOrigin = "-3px 100px";
+          pageTwo.style.transition = "transform 1500ms ease-in";
+        }, 600);
+
+        //Third Page Turn
+        setTimeout(function() {
+          setTimeout(function() {
+            p5.style.display = "none";
+            p6.style.display = "flex";
+            pageThree.style.zIndex = "13";
+          }, 950);
+          pageThree.style.transform = "rotateX(10deg) rotateY(-180deg)";
+          pageThree.style.transformOrigin = "-3px 100px";
+          pageThree.style.transition = "transform 1500ms ease-in";
+        }, 900);
+
+        setTimeout(function() {
+          goForward1.style.display = "none";
+          goBack1.style.display = "none";
+          goForward4.style.display = "inline";
+          goBack4.style.display = "inline";
+          goForward4.disabled = false;
+          goBack4.disabled = false;
+        }, 2500);
+      }
+
+      projects.onclick = projectsSocial;
+      social.onclick = projectsSocial;
+
+      //----------------//
+
+              //----8. Version 9. Contact and Back Cover----//
+              const versionContact = function() {
+                goForward1.disabled = true;
+                goBack1.disabled = true;
+
+                //First Page Turn
+              setTimeout(function() {
+                  p1.style.display = "none";
+                  p2.style.display = "flex";
+                  pageOne.style.zIndex = "11";
+                }, 950);
+
+                pageOne.style.transform = "rotateX(10deg) rotateY(-180deg)";
+                pageOne.style.transformOrigin = "-3px 100px";
+                pageOne.style.transition = "transform 1500ms ease-in";
+
+                //Second Page Turn
+
+                setTimeout(function() {
+                  setTimeout(function() {
+                    p3.style.display = "none";
+                    p4.style.display = "block";
+                    pageTwo.style.zIndex = "12";
+                  }, 950);
+                  pageTwo.style.transform = "rotateX(10deg) rotateY(-180deg)";
+                  pageTwo.style.transformOrigin = "-3px 100px";
+                  pageTwo.style.transition = "transform 1500ms ease-in";
+                }, 600);
+
+                //Third Page Turn
+                setTimeout(function() {
+                  setTimeout(function() {
+                    p5.style.display = "none";
+                    p6.style.display = "flex";
+                    pageThree.style.zIndex = "13";
+                  }, 950);
+                  pageThree.style.transform = "rotateX(10deg) rotateY(-180deg)";
+                  pageThree.style.transformOrigin = "-3px 100px";
+                  pageThree.style.transition = "transform 1500ms ease-in";
+                }, 900);
+
+                //Fourth Page Turn
+                setTimeout(function() {
+                  setTimeout(function() {
+                    p7.style.display = "none";
+                    p8.style.display = "flex";
+                    pageFour.style.zIndex = "14";
+                  }, 950);
+                  pageFour.style.transform = "rotateX(10deg) rotateY(-180deg)";
+                  pageFour.style.transformOrigin = "-3px 100px";
+                  pageFour.style.transition = "transform 1500ms ease-in";
+                }, 1200);
+
+                setTimeout(function() {
+                  goForward1.style.display = "none";
+                  goBack1.style.display = "none";
+                    goBack5.style.display = "inline";
+                    goBack5.disabled = false;
+                  }, 2800);
+                  card.classList.add("hoverOn");
+                }
+
+        version.onclick = versionContact;
+        contact.onclick = versionContact;
+
+      /*----BUTTONS BUTTONS BUTTONS!!----*/
 //----PAGE 1----//
   //----Close Book----//
       const closeCover = function() {
@@ -101,6 +282,7 @@ turnCoverButton.onclick = openBook;
       }
 
 goBack1.onclick = closeCover;
+
 
   //----TOC forward---//
       const turn1 = function() {
@@ -127,9 +309,11 @@ goBack1.onclick = closeCover;
         }
 
 goForward1.onclick = turn1;
+about.onclick = turn1;
+bio.onclick = turn1;
 
 
-  //----PAGES 2 AND 3----//
+  //----2. About and 3. Bio----//
   //---- Back----//
 
 const back1 = function() {
@@ -182,7 +366,7 @@ goBack2.onclick = back1;
 
 goForward2.onclick = turn2;
 
-  //----PAGES 4 AND 5----//
+  //----4. Education and 5. Work----//
   //---- Back----//
 
 const back2 = function() {
@@ -237,7 +421,7 @@ goBack3.onclick = back2;
 
 goForward3.onclick = turn3;
 
-  //----PAGES 6 AND 7 ----//
+  //----6. Projects and 7. Social ----//
   //---- Back----//
 
   const back3 = function() {
@@ -290,7 +474,7 @@ goForward3.onclick = turn3;
 goForward4.onclick = turn4;
 
 
-  //---- Back Cover----//
+  //---- 8. Version Info, 9. Contact Card and Back Cover----//
 
   const back4 = function() {
     setTimeout(function() {
