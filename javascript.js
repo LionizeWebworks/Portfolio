@@ -160,7 +160,7 @@ goBack2.onclick = back1;
       const turn2 = function() {
         setTimeout(function() {
             p3.style.display = "none";
-            p4.style.display = "flex";
+            p4.style.display = "block";
           }, 900);
         pageTwo.style.transform = "rotateX(10deg) rotateY(-180deg)";
         pageTwo.style.transformOrigin = "-3px 100px";

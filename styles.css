@@ -11,6 +11,7 @@
 :root {
     --titles: "Narnia", sans-serif;
     --pageHeads: "Curly", serif;
+    --headerColor: rgb(180, 2, 2);
     --text: Georgia, 'Times New Roman', Times, serif;
     --lists: "Cinzel", serif;
 }
@@ -151,7 +152,7 @@ body {
 #card h1 {
     font-family: var(--lists);
     font-size: 5px;
-    color: red;
+    color: var(--headerColor);
     margin-top: 6px;
     margin-bottom: 4px;
     line-height: 1;
@@ -178,11 +179,30 @@ body {
         /* z-index: 11; */
         margin-left: 3px;
         border-radius: 2px;
-}
+    }
+
+.page span {
+        position: absolute;
+        bottom: 6%;
+        left: 48%;
+        font-size: 12px;
+        color: var(--headerColor);
+    }
 
 .flipside {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     transform: scaleX(-1);
 }
+
+
+h1 {
+    font-family: var(--pageHeads);
+    color: var(--headerColor);
+}
+
+
 
 /*----Page One----*/
 
@@ -202,12 +222,11 @@ z-index: 9;
     padding-left: 5px;
     padding-top: 1rem;
     font-size: 12px;
-    font-family: var(--pageHeads);
 }
 
 #p1 ul {
     padding-left: 25px;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 8px;
     font-family: var(--lists);
     list-style-type: none;
@@ -221,14 +240,14 @@ z-index: 9;
     display: none;
     flex-direction: column;
     align-items: center;
-    margin-left: 4px;
+    /* justify-content: center; */
+    /* margin-left: 4px; */
 }
 
 #p2 h1 {
     padding-top: 1rem;
-    /* padding-right: 8px; */
+    padding-right: 8px;
     font-size: 12px;
-    font-family: var(--pageHeads);
 }
 
 #p2 img {
@@ -237,8 +256,8 @@ z-index: 9;
 }
 
 #p2 h2 {
-    /* position: relative; */
-    /* padding-right: 5px; */
+    position: relative;
+    padding-right: 5px;
     font-size: 8px;
     font-family: var(--lists);
     text-align: center;
@@ -275,22 +294,26 @@ z-index: 9;
 
 #p4 {
     display: none;
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: center;
-    padding: 16px;
+    padding: 16px; */
 }
 
 #p4 h1 {
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    padding-top: 1rem;
     font-size: 12px;
-    font-family: var(--pageHeads);
 }
 
-#p4 ul {
+/* #p4 ul {
+    padding-left: 30px;
+    padding-top: 10px;
     font-size: 8px;
     font-family: var(--lists);
-    list-style-type: circle;
     line-height: 1.7;
-}
+} */
 
 
 /*----Page Three----*/
@@ -299,9 +322,21 @@ z-index: 9;
     z-index: 7;
 }
 
+
+/* Page 3, Side 1: Resume */
+
+#p5 {
+    display: flex;
+    justify-content: center;
+}
+
+#p5 h1 {
+    font-size: 12px;
+}
+
 a {
     position: absolute;
-    bottom: 10%;
+    /* bottom: 15%; */
     font-size: 10px;
     color: crimson;;
 }
@@ -312,28 +347,6 @@ a:hover {
     text-decoration: none;
 }
 
-/* Page 3, Side 1: Work History */
-
-#p5 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-  }
-
-  #p5 h1 {
-    font-size: 12px;
-    font-family: var(--pageHeads);
-  }
-
-  #p5 h3 {
-    font-size: 10px;
-    text-align: center;
-  }
-
-  #p5 h4 {
-    font-size: 8px;
-  }
 
 /* Page 3, Side 2: Projects */
 
@@ -346,7 +359,6 @@ a:hover {
 
   #p6 h1 {
     font-size: 12px;
-    font-family: var(--pageHeads);
   }
 
 
@@ -367,7 +379,6 @@ a:hover {
 
   #p7 h1 {
     font-size: 12px;
-    font-family: var(--pageHeads);
   }
 
 
@@ -382,7 +393,6 @@ a:hover {
 
 #p8 h1 {
     font-size: 12px;
-    font-family: var(--pageHeads);
 }
 
 #p8 h3 {

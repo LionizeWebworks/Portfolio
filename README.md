@@ -16,8 +16,8 @@ The book opens, the pages turn forward (with backwards turning and a functional 
 Most Recent Update: 2.0
 **New Features**
 *Turned off text selection
-
-*Added a Back Button
+*Added completed resume
+*Added Back Buttons
 *Links to Social Media
 *Added more accessiblity features.
 *Deleted work history/education for reworking
