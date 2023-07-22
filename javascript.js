@@ -320,6 +320,7 @@ const back1 = function() {
   setTimeout(function() {
     p1.style.display = "block";
     p2.style.display = "none";
+    pageTwo.style.zIndex = "8";
   }, 900);
     pageOne.style.transform = "rotateX(-10deg)";
     pageOne.style.transition = "transform 3s";
@@ -376,6 +377,7 @@ const back2 = function() {
   }, 900);
     pageTwo.style.transform = "rotateX(-10deg)";
     pageTwo.style.transition = "transform 3s";
+    pageThree.style.zIndex = "7";
 
     goForward3.disabled = true;
     goBack3.disabled = true;
@@ -431,6 +433,7 @@ goForward3.onclick = turn3;
     }, 900);
       pageThree.style.transform = "rotateX(-10deg)";
       pageThree.style.transition = "transform 3s";
+      pageFour.style.zIndex = "6";
 
       goForward4.disabled = true;
       goBack4.disabled = true;
