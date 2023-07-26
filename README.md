@@ -23,7 +23,8 @@ Most Recent Update: 2.0
 *Added links to Social Media
 
 **Bug Fixes**
-*Disable TOC buttons until book is opened.
+*Fix some page layouts that got broken
+*Disable TOC links when button/link is clicked.
 
 **Near Future Updates**
 *More Accessibility Features
