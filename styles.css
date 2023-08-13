@@ -180,7 +180,7 @@ body {
         border-radius: 2px;
     }
 
-.page span {
+.pageNumber {
         position: absolute;
         bottom: 6%;
         left: 48%;
@@ -371,13 +371,25 @@ a:hover {
     align-items: center;
   }
 
-  #p6 h1 {
-    padding-bottom: 20px;
-  }
-
   #p6 a {
+    margin: 5px;
+    font-size: 10px;
+    color: black;
+    font-style: italic;
+    text-decoration: none;
+}
+
+    #p6 a:hover {
     font-size: 10px;
     color: crimson;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+#p6 img {
+    width: 115px;
+    margin-right: 6px;
+    margin-bottom: 5px;
 }
 
 a:hover {
@@ -386,7 +398,12 @@ a:hover {
     text-decoration: none;
 }
 
-
+#neoText {
+    font-size: 7px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 9px;
+}
 
   /*----Page Four: Older Projects/Version Info----*/
 
@@ -395,17 +412,59 @@ a:hover {
 }
 
 /* p7: Older Projects */
-
 #p7 {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-#p7 a {
-        font-size: 10px;
-        text-align: center;
-      }
+  #p7 a {
+    margin-top: 5px;
+    font-size: 10px;
+    color: black;
+    font-style: italic;
+    text-decoration: none;
+}
+
+    #p7 a:hover {
+    font-size: 10px;
+    color: crimson;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+    #calcBox {
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 12%;
+    }
+
+    #calcBox img {
+        height: 75px;
+        margin-right: 3px;
+    }
+
+    #thin {
+        font-size: 7px;
+        width: 50px;
+        padding: 3px;
+    }
+
+    #calcFeatures {
+        width: 115px;
+        position: absolute;
+        bottom: 16%;
+        left: 12%;
+        font-size: 6px;
+    }
+
+    #calcFeatures h3 {
+        font-size: 6px;
+    }
+
+
+
 
 /* Page 4, Side 2: Version Info */
 
