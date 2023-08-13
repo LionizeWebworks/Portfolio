@@ -137,29 +137,29 @@ body {
         display: block;
         position: absolute;
         background-color: white;
-        border: 1px outset rgb(221, 221, 221);
+        border: .5px outset rgb(221, 221, 221);
         bottom: 21%;
         left: 34.5%;
         height: 35px;
         width: 58px;
-        text-align: center;
         color: black;
         z-index: 4;
     }
 
 
-#card h1 {
-    font-family: var(--lists);
-    font-size: 5px;
+    #card h1 {
+    padding: 3px !important;
+    text-align: center;
+    font-family: var(--lists) !important;
+    font-size: 5px !important;
     color: var(--headerColor);
-    margin-top: 6px;
-    margin-bottom: 4px;
-    line-height: 1;
 }
 
 #card h2 {
+    padding-left: 3px;
+    text-align: left;
     font-family: var(--text);
-    font-size: 4px;
+    font-size: 3px;
     font-weight: lighter;
     color: black;
     }
@@ -196,7 +196,7 @@ body {
 }
 
 
-h1:not(.card) {
+h1:not(#card) {
     font-family: var(--pageHeads);
     color: var(--headerColor);
     font-size: var(--headerSize);
@@ -223,14 +223,14 @@ z-index: 9;
     padding-left: 5px;
 }
 
-#p1 ul {
-    padding-left: 25px;
+#p1 ol {
+    padding-left: 35px;
     padding-top: 5px;
     font-size: 8px;
     font-family: var(--lists);
-    list-style-type: none;
     line-height: 1.7;
 }
+
 
 #p1 li:hover {
     text-decoration: underline;
@@ -269,7 +269,7 @@ z-index: 9;
 
 
 
-/*----Page Two----*/
+/*----Page Two: Bio/Education----*/
 
 #two {
     z-index: 8;
@@ -325,7 +325,7 @@ ul .inner {
 
 
 
-/*----Page Three----*/
+/*----Page Three: Resume&Socials/Newer Projects----*/
 
 #three {
     z-index: 7;
@@ -338,17 +338,44 @@ ul .inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 2;
   }
 
-#p5 h3 {
-        font-size: 10px;
-        text-align: center;
-        padding: 16px;
-      }
+  #p5 h1 {
+    padding-bottom: 20px;
+  }
 
-    a {
+#p5 a {
+    font-size: 10px;
+    color: crimson;
+}
+
+a:hover {
+    font-size: 10px;
+    color: maroon;
+    text-decoration: none;
+}
+
+#p5 span {
     position: absolute;
-    bottom: 15%;
+    bottom: 3% !important;
+    left: 50% !important;
+  }
+
+
+/* p6: Projects */
+
+#p6 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #p6 h1 {
+    padding-bottom: 20px;
+  }
+
+  #p6 a {
     font-size: 10px;
     color: crimson;
 }
@@ -360,52 +387,53 @@ a:hover {
 }
 
 
-/* p6: Projects */
 
-#p6 {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-  }
-
-
-
-  /*----Page Four----*/
+  /*----Page Four: Older Projects/Version Info----*/
 
 #four {
     z-index: 6;
 }
 
-/* p7: Social Media */
+/* p7: Older Projects */
 
 #p7 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
   }
 
+#p7 a {
+        font-size: 10px;
+        text-align: center;
+      }
 
-/* Page 4, Side 2: Planned Updates */
+/* Page 4, Side 2: Version Info */
 
 #p8 {
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    line-height: 1.5;
 }
 
+#p8 h2 {
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 5px;
+  }
+
 #p8 h3 {
-  font-size: 10px;
+font-weight: bold;
+  font-size: 8px;
   text-align: center;
 }
 
 #p8 ul {
-    font-size: 8px;
+    font-size: 6px;
     font-family: var(--lists);
     list-style-type: circle;
-    line-height: 1.2;
+    line-height: 1.5;
     margin-top: 5px;
     margin-left: 15px;
 }

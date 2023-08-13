@@ -10,7 +10,7 @@ const bio = document.getElementById("bio");
 const education = document.getElementById("education");
 const work = document.getElementById("work");
 const projects = document.getElementById("projects");
-const social = document.getElementById("social");
+const projects2 = document.getElementById("projects2");
 const version = document.getElementById("version");
 const contact = document.getElementById("contact");
 
@@ -136,7 +136,7 @@ turnCoverButton.onclick = openBook;
 
       //----------------//
 
-              //----6. Projects 7. Social----//
+              //----6. Projects----//
       const projectsSocial = function() {
         goForward1.disabled = true;
         goBack1.disabled = true;
@@ -188,7 +188,7 @@ turnCoverButton.onclick = openBook;
       }
 
       projects.onclick = projectsSocial;
-      social.onclick = projectsSocial;
+      projects2.onclick = projectsSocial;
 
       //----------------//
 
@@ -289,10 +289,10 @@ goBack1.onclick = closeCover;
           setTimeout(function() {
               p1.style.display = "none";
               p2.style.display = "flex";
-            }, 900);
+            }, 800);
             pageOne.style.transform = "rotateX(10deg) rotateY(-180deg)";
             pageOne.style.transformOrigin = "-3px 100px";
-            pageOne.style.transition = "transform 3s";
+            pageOne.style.transition = "transform 2.8s";
             pageOne.style.zIndex = "11";
 
             goForward1.disabled = true;
@@ -321,9 +321,9 @@ const back1 = function() {
     p1.style.display = "block";
     p2.style.display = "none";
     pageTwo.style.zIndex = "8";
-  }, 900);
+  }, 800);
     pageOne.style.transform = "rotateX(-10deg)";
-    pageOne.style.transition = "transform 3s";
+    pageOne.style.transition = "transform 2.8s";
 
     goForward2.disabled = true;
     goBack2.disabled = true;
@@ -346,10 +346,10 @@ goBack2.onclick = back1;
         setTimeout(function() {
             p3.style.display = "none";
             p4.style.display = "block";
-          }, 900);
+          }, 800);
         pageTwo.style.transform = "rotateX(10deg) rotateY(-180deg)";
         pageTwo.style.transformOrigin = "-3px 100px";
-        pageTwo.style.transition = "transform 3s";
+        pageTwo.style.transition = "transform 2.8s";
         pageTwo.style.zIndex = "12";
 
         goForward2.disabled = true;
@@ -374,9 +374,9 @@ const back2 = function() {
   setTimeout(function() {
     p3.style.display = "flex";
     p4.style.display = "none";
-  }, 900);
+  }, 800);
     pageTwo.style.transform = "rotateX(-10deg)";
-    pageTwo.style.transition = "transform 3s";
+    pageTwo.style.transition = "transform 2.8s";
     pageThree.style.zIndex = "7";
 
     goForward3.disabled = true;
@@ -400,11 +400,11 @@ goBack3.onclick = back2;
         setTimeout(function() {
             p5.style.display = "none";
             p6.style.display = "flex";
-          }, 900);
+          }, 800);
 
         pageThree.style.transform = "rotateX(10deg) rotateY(-180deg)";
         pageThree.style.transformOrigin = "-3px 100px";
-        pageThree.style.transition = "transform 3s";
+        pageThree.style.transition = "transform 2.8s";
         pageThree.style.zIndex = "13";
 
         goForward3.disabled = true;
@@ -430,9 +430,9 @@ goForward3.onclick = turn3;
     setTimeout(function() {
       p5.style.display = "flex";
       p6.style.display = "none";
-    }, 900);
+    }, 800);
       pageThree.style.transform = "rotateX(-10deg)";
-      pageThree.style.transition = "transform 3s";
+      pageThree.style.transition = "transform 2.8s";
       pageFour.style.zIndex = "6";
 
       goForward4.disabled = true;
@@ -456,10 +456,10 @@ goForward3.onclick = turn3;
         setTimeout(function() {
             p7.style.display = "none";
             p8.style.display = "flex";
-          }, 900);
+          }, 800);
         pageFour.style.transform = "rotateX(10deg) rotateY(-180deg)";
         pageFour.style.transformOrigin = "-3px 100px";
-        pageFour.style.transition = "transform 3s";
+        pageFour.style.transition = "transform 2.8s";
         pageFour.style.zIndex = "14";
 
         goForward4.disabled = true;
@@ -483,9 +483,9 @@ goForward4.onclick = turn4;
     setTimeout(function() {
       p7.style.display = "flex";
       p8.style.display = "none";
-    }, 900);
+    }, 800);
       pageFour.style.transform = "rotateX(-10deg)";
-      pageFour.style.transition = "transform 3s";
+      pageFour.style.transition = "transform 2.8s";
 
       goBack5.disabled = true;
 
